@@ -1,4 +1,5 @@
-/* General Styles */
+/* Reset and Basic Styles */
+/* ---------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -11,16 +12,19 @@ body {
     background-color: #111;
 }
 
+/* Header Styles */
+/* ------------- */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1rem 2rem;
     background-color: #111;
     z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
@@ -29,31 +33,36 @@ header .logo {
     color: #ddd;
 }
 
+/* Burger Menu */
 .burger-menu {
+    width: 25px;
+    height: 21px;
+    cursor: pointer;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    cursor: pointer;
 }
 
 .burger-menu span {
-    background-color: #ddd;
-    height: 3px;
-    border-radius: 2px;
     width: 100%;
+    height: 3px;
+    background-color: #ddd;
+    border-radius: 2px;
 }
 
+/* Navigation Menu */
 .menu {
     position: absolute;
     top: 60px;
     right: 20px;
+    padding: 1rem;
     background-color: #222;
     border-radius: 5px;
-    padding: 1rem;
     display: none;
     z-index: 999;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .menu ul {
@@ -65,8 +74,8 @@ header .logo {
 }
 
 .menu ul li a {
-    text-decoration: none;
     color: #ddd;
+    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s;
@@ -76,70 +85,85 @@ header .logo {
     color: silver;
 }
 
+/* Hidden Class */
 .hidden {
     display: none;
 }
-
 /* Fullscreen Sections */
+/* ------------------- */
 .fullscreen-section {
     position: relative;
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     text-align: center;
+
+    color: #fff;
 }
 
+/* Section Overlays */
 .fullscreen-section .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.5); /* Grey overlay */
     z-index: 1;
 }
 
+/* Section Content */
 .fullscreen-section .content {
     position: relative;
     z-index: 2;
+
+    max-width: 800px;
+    padding: 0 1rem;
 }
 
-.fullscreen-section h1, .fullscreen-section h2 {
+/* Heading Styles */
+.fullscreen-section h1,
+.fullscreen-section h2 {
     font-size: 2.5rem;
     color: silver;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.fullscreen-section p, .fullscreen-section ul {
-    font-size: 1.1rem;
+/* Paragraph Styles within Fullscreen Sections */
+.fullscreen-section p {
+    margin-bottom: 2rem; /* Space between paragraphs */
+    line-height: 1.6;    /* Line spacing within paragraphs */
     color: #ddd;
-
-    
+    font-size: 1.1rem;
 }
 
-/* Hero Section */
+/* Remove top margin from the first paragraph */
+.fullscreen-section p:first-of-type {
+    margin-top: 0;
+}
+
+/* Background Images for Sections */
 #hero {
     background: url('new-york-city.jpeg') center/cover no-repeat;
 }
 
-/* About Section */
 #about {
-    background:  #111; /* Simple black for contrast */
+    background: #111; /* Solid background for contrast */
 }
 
-/* Services Section */
 #services {
     background: url('meeting-grey.jpg') center/cover no-repeat;
 }
 
-/* Contact Section */
 #contact {
-    background: #111; /* Simple black for contrast */
+    background: #111; /* Solid background for contrast */
 }
 
-/* Form */
+/* Form Styles */
+/* ----------- */
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -147,59 +171,113 @@ form {
 }
 
 form label {
-    color: #ddd;
-    font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
+    color: #ddd;
+    font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
+
     border: 1px solid #444;
     border-radius: 5px;
     background-color: #111;
     color: #ddd;
 }
 
+form input::placeholder,
+form textarea::placeholder {
+    color: #555;
+}
+
 form button {
+    padding: 0.75rem 1.5rem;
     background-color: silver;
     color: #111;
+
     border: none;
-    padding: 0.75rem 1.5rem;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
+
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 form button:hover {
     background-color: #ccc;
+    color: #000;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #111;
-    color: #777;
-}
+/* "Our Team" Button */
+/* ----------------- */
 .team-button {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
+
     background-color: silver;
     color: #111;
     text-decoration: none;
+
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
-    font-size: 1rem;
+
     transition: background-color 0.3s, color 0.3s;
 }
 
 .team-button:hover {
     background-color: #ccc;
     color: #000;
+}
+
+/* Footer Styles */
+/* ------------- */
+footer {
+    text-align: center;
+    padding: 1rem;
+
+    background-color: #111;
+    color: #777;
+
+    position: relative;
+    z-index: 1;
+}
+/* Our Services Section Styles */
+/* --------------------------- */
+
+/* Remove default list styles */
+#services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style list items */
+#services ul li {
+    position: relative;
+    padding-left: 30px; /* Space for custom line marker */
+    margin-bottom: 1.5rem; /* Increased spacing between bullet points */
+    
+    font-size: 1.0rem; /* Increased font size */
+    font-family: 'Roboto', sans-serif; /* Different font for bullet points */
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Custom line marker before each list item */
+#services ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center the line vertically */
+    width: 15px; /* Length of the line marker */
+    height: 2px; /* Thickness of the line marker */
+    background-color: silver; /* Color of the line marker */
 }
