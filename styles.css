@@ -348,12 +348,16 @@ footer {
 
 
 /* Individual Result Item */
+/* Ensure all boxes are the same size */
 .result-item {
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
     align-items: center;
     text-align: center;
     padding: 1rem;
+    width: 250px; /* Fixed width */
+    height: 200px; /* Fixed height */
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -365,42 +369,63 @@ footer {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Icon Style */
+/* Make sure the icons and text are aligned within each box */
 .result-item i {
     font-size: 3rem;
     color: silver;
     margin-bottom: 0.5rem;
 }
 
-/* Heading Style */
 .result-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     margin-bottom: 0.5rem;
 }
 
-/* Description Style */
 .result-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #ccc;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
-/* Responsive Typography for Smaller Screens */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    #results h2 {
-        font-size: 2rem;
-    }
-
-    #results p {
-        font-size: 1rem;
+    .result-item {
+        width: 180px; /* Adjust width for smaller screens */
+        height: 180px; /* Adjust height for smaller screens */
     }
 
     .result-item i {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Smaller icons */
     }
 
     .result-item h3 {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Smaller headings */
+    }
+
+    .result-item p {
+        font-size: 0.8rem; /* Smaller description text */
+    }
+}
+/* Ensure text stays within sections on small screens */
+.fullscreen-section {
+    overflow: hidden; /* Prevent content overflow */
+    min-height: 100vh; /* Ensure section adapts to content */
+}
+
+/* Adjust text and spacing for very small screens (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    .fullscreen-section .content {
+        padding: 1rem; /* Add padding for better spacing on small screens */
+    }
+
+    .fullscreen-section h1,
+    .fullscreen-section h2 {
+        font-size: 1.8rem; /* Smaller heading font size */
+    }
+
+    .fullscreen-section p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
+        line-height: 1.4; /* Adjust line spacing */
     }
 }
