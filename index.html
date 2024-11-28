@@ -6,7 +6,7 @@
     <title>AD Investment Group</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preload" href="new-york-city.jpg" as="image">
+    <link rel="preload" href="new-york-city.jpeg" as="image">
 
     
 </head>
@@ -86,17 +86,24 @@
             <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-
+    
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
+    
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
+    
+                <button type="submit" class="submit-button">Submit</button>
+    
+                <!-- Add the address below the submit button -->
+                <div class="address">
+                    AD Investment Group, Inc.<br>
+                    99 Wall St, New York, NY 10005, USA
+                </div>
             </form>
         </div>
     </section>
+    
 
     <footer>
         <p>&copy; 2024 AD Investment Group. All rights reserved.</p>

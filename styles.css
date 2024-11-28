@@ -194,24 +194,35 @@ form textarea::placeholder {
     color: #555;
 }
 
-form button {
+/* Center the Submit Button */
+.submit-button {
+    display: block;
+    margin: 1rem auto; /* Centers the button horizontally */
     padding: 0.75rem 1.5rem;
     background-color: silver;
     color: #111;
-
-    border: none;
-    border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
-
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
-form button:hover {
+.submit-button:hover {
     background-color: #ccc;
     color: #000;
 }
+
+/* Style the Address */
+.address {
+    text-align: center; /* Center the address text */
+    margin-top: 1rem;   /* Space between the button and the address */
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    color: #ddd;        /* Light grey color to match the theme */
+    line-height: 1.5;   /* Spacing between lines */
+}
+
 
 /* "Our Team" Button */
 /* ----------------- */
