@@ -226,26 +226,34 @@ form textarea::placeholder {
 
 /* "Our Team" Button */
 /* ----------------- */
-.team-button {
-    display: inline-block;
-    margin-top: 1.5rem;
+/* Ensure proper alignment of the "Our Team" button */
+#about .team-button {
+    display: block; /* Ensures the button behaves as a block-level element */
+    margin: 2rem auto 0; /* Centers the button and adds space above */
     padding: 0.75rem 1.5rem;
-
     background-color: silver;
     color: #111;
-    text-decoration: none;
-
     font-size: 1rem;
     font-weight: bold;
+    border: none;
     border-radius: 5px;
-
+    text-align: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.team-button:hover {
+#about .team-button:hover {
     background-color: #ccc;
     color: #000;
 }
+
+/* Fix layout issues on small screens */
+@media (max-width: 768px) {
+    #about .team-button {
+        margin: 1.5rem auto 0; /* Adjust spacing for smaller screens */
+        width: 80%; /* Ensure button width adapts to smaller screens */
+    }
+}
+
 
 /* Footer Styles */
 /* ------------- */
